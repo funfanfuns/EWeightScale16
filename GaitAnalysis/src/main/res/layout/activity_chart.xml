@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/sys_bg">
+	<LinearLayout
+
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingBottom="10dp">
+
+		<RadioGroup
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:orientation="horizontal">
+			<RadioButton
+				android:id="@+id/radioHome"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="参数1"
+				android:checked="true"/>
+
+			<RadioButton
+				android:id="@+id/radioRoad"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="参数2" />
+			<RadioButton
+				android:id="@+id/radioStair"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="参数3" />
+
+			<RadioButton
+				android:id="@+id/radioOther"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="参数4" />
+
+
+		</RadioGroup>
+		<LinearLayout
+		android:id="@+id/ChartLinearLayout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingBottom="10dp">
+
+		<include layout="@layout/widget_chartdate_selector"
+			android:id="@+id/WidgetChartDateSelector"/>
+
+		</LinearLayout>
+	</LinearLayout>
+	<TextView
+	    android:id="@+id/NoDataTipView"
+	    android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:text="@string/no_data"
+		android:textColor="@color/blue"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:visibility="gone"/>
+
+</FrameLayout>
